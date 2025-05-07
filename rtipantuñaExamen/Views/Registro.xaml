@@ -10,6 +10,13 @@
             HorizontalOptions="Center" 
             TextColor="blue"
             FontSize="22"/>
+        <Label 
+      Text="{Binding LabelText}"
+      FontSize="24"
+      HorizontalOptions="Fill" />
+        <Button x:Name="btnResumen" Text="Resumen"
+            Clicked="btnResumen_Clicked"
+            HorizontalOptions="EndAndExpand"/>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -62,7 +69,7 @@
             <Label Text="Monto Inicial" Grid.Row="2" Grid.Column="0"/>
             <Entry x:Name="txtMonto" Grid.Row="2" Grid.Column="1" Placeholder="monto inicial"></Entry>
             <Button x:Name="btnInciar"
-Text="Iniciar Sesion"
+Text="Registrar"
 Grid.Row="3"
 Grid.Column="1"/>
 

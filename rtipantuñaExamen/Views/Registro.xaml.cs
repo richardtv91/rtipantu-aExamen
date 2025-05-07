@@ -11,6 +11,7 @@ public partial class Registro : ContentPage
     public Registro(string usuario)
     {
         InitializeComponent();
+        
     }
     private void PickerVa_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -23,4 +24,8 @@ public partial class Registro : ContentPage
     {
     }
 
+    private void btnResumen_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
