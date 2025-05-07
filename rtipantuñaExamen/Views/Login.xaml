@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="rtipantuñaExamen.Views.Login"
              Title="Login">
-    <VerticalStackLayout>
+    <VerticalStackLayout Padding="25" Spacing="20">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Iniciar Sesion"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            FontSize="20"
+            TextColor="red"/>
+        <Image Source="logo.jpg" WidthRequest="250"></Image>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtUsuario" Placeholder="Ingrese usuario" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Contraseña" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="txtContraseña" Placeholder="Ingresar contraseña" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="btnInciar"
+            Text="Iniciar Sesion"
+            Clicked="btnIniciar_Clicked"
+            Grid.Row="2"
+            Grid.Column="0" Grid.ColumnSpan="2"/>
+            
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

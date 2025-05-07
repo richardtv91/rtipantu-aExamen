@@ -5,8 +5,69 @@
              Title="Registro">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Registro"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center" 
+            TextColor="blue"
+            FontSize="22"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="txtNombre" Placeholder="Ingrese Nombre" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Apellido" Grid.Row="0" Grid.Column="1"/>
+            <Entry x:Name="txtContraseña" Placeholder="Ingresar contraseña" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Voltiamperios VA" Grid.Row="0" Grid.Column="2"/>
+
+            <Picker x:Name="PikerVa" Grid.Row="2" Grid.Column="2" Title="Seleccione " SelectedIndexChanged="PickerVa_SelectedIndexChanged" FontAttributes="Bold">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>500</x:String>
+                        <x:String>750</x:String>
+                        <x:String>1000</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Fecha" Grid.Row="0" Grid.Column="0"/>
+            <DatePicker x:Name="dFechas" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Ciudad" Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="PikerCiudad" Grid.Row="1" Grid.Column="1" Title="Seleccione " SelectedIndexChanged="PickerCiudad_SelectedIndexChanged" FontAttributes="Bold">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Quito</x:String>
+                        <x:String>Guayaquil</x:String>
+                        <x:String>Riobamba</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Label Text="Monto Inicial" Grid.Row="2" Grid.Column="0"/>
+            <Entry x:Name="txtMonto" Grid.Row="2" Grid.Column="1" Placeholder="monto inicial"></Entry>
+            <Button x:Name="btnInciar"
+Text="Iniciar Sesion"
+Grid.Row="3"
+Grid.Column="1"/>
+
+        </Grid>
+
+
     </VerticalStackLayout>
 </ContentPage>
